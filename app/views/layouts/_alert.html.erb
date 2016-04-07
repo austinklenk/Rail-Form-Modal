@@ -1,0 +1,22 @@
+<div class="alert body">
+  <% if notice %>
+    <div class="alert alert-success alert-dismissible fade in" role="alert">
+        <p class="notice"><%= notice %></p>
+    </div>
+  <% end %>
+  <% if alert %>
+      <div class="alert alert-danger alert-dismissible fade in" role="alert">
+        <p class="alert"><%= alert %></p>
+    </div>
+  <% end %>
+  <script>
+    $(".alert-success").fadeTo(2000, 500).slideUp(500, function(){
+        $(".alert-success").alert('close');
+    });
+  </script>
+  <script>
+    $(".alert-danger").fadeTo(2000, 500).slideUp(500, function(){
+        $(".alert-danger").alert('close');
+    });
+  </script>
+</div>
